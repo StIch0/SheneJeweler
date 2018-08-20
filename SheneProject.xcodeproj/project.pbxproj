@@ -7,15 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77006CE8212A85F20047FCC3 /* NewsModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77006CE7212A85F10047FCC3 /* NewsModelResponse.swift */; };
+		77006CEA212A89230047FCC3 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77006CE9212A89230047FCC3 /* NewsViewController.swift */; };
+		77155ADD212A8F6600312076 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155ADC212A8F6600312076 /* NewsCell.swift */; };
+		77155AE1212A92AB00312076 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77155AE0212A92AB00312076 /* NewsCell.xib */; };
+		77155AE7212A953F00312076 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AE6212A953F00312076 /* DetailNewsViewController.swift */; };
+		77155AE9212A968600312076 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AE8212A968600312076 /* DetailViewModel.swift */; };
+		77155AEB212AA1D400312076 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AEA212AA1D400312076 /* ShopViewController.swift */; };
+		77155AED212AA42300312076 /* News+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AEC212AA42300312076 /* News+TableView.swift */; };
+		77155AEF212AA44A00312076 /* Shop+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AEE212AA44A00312076 /* Shop+TableView.swift */; };
+		77155AF1212AA49200312076 /* Shop+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AF0212AA49200312076 /* Shop+LocationManager.swift */; };
+		77155AF3212AA4DE00312076 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AF2212AA4DE00312076 /* ShopViewModel.swift */; };
+		77155AF5212AA58D00312076 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AF4212AA58D00312076 /* Extention.swift */; };
+		77155AF7212AA66D00312076 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AF6212AA66D00312076 /* ShopCell.swift */; };
+		77155AFA212AA87200312076 /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77155AF9212AA87200312076 /* ShopCell.xib */; };
+		77155B00212AB31C00312076 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155AFF212AB31C00312076 /* SuccessModel.swift */; };
+		77155B02212AB36200312076 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B01212AB36200312076 /* ProfileViewModel.swift */; };
+		77155B04212AB58000312076 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B03212AB58000312076 /* ProfileViewController.swift */; };
+		77155B06212AB95E00312076 /* Phone+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B05212AB95E00312076 /* Phone+TextField.swift */; };
+		77155B08212ABAA300312076 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B07212ABAA300312076 /* TokenModel.swift */; };
+		77155B11212AC1B700312076 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B10212AC1B700312076 /* UserModel.swift */; };
+		77155B13212AC3D900312076 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B12212AC3D900312076 /* UserViewModel.swift */; };
+		77155B15212AC43500312076 /* UserModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B14212AC43500312076 /* UserModelResponse.swift */; };
+		77155B17212AC5BD00312076 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B16212AC5BD00312076 /* UserViewController.swift */; };
 		77E2AFC5212133F5007E22D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFC4212133F5007E22D2 /* AppDelegate.swift */; };
 		77E2AFC7212133F5007E22D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFC6212133F5007E22D2 /* ViewController.swift */; };
 		77E2AFCA212133F5007E22D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E2AFC8212133F5007E22D2 /* Main.storyboard */; };
 		77E2AFCD212133F5007E22D2 /* SheneProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFCB212133F5007E22D2 /* SheneProject.xcdatamodeld */; };
 		77E2AFCF212133F5007E22D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E2AFCE212133F5007E22D2 /* Assets.xcassets */; };
 		77E2AFD2212133F5007E22D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E2AFD0212133F5007E22D2 /* LaunchScreen.storyboard */; };
+		77E2AFDA212134FE007E22D2 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFD9212134FE007E22D2 /* NewsModel.swift */; };
+		77FF5BB121252EC800D0E81F /* APIClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF5BB021252EC800D0E81F /* APIClientManager.swift */; };
+		77FF922621255618002A942C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF922521255618002A942C /* NewsViewModel.swift */; };
+		77FF922A2125615F002A942C /* ShopModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF92292125615F002A942C /* ShopModelResponse.swift */; };
+		77FF922C212561A9002A942C /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF922B212561A9002A942C /* ShopModel.swift */; };
+		77FF922E2125629E002A942C /* APISelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF922D2125629E002A942C /* APISelected.swift */; };
+		F319DA4F4564D7C1027628CE /* Pods_SheneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5465F8D87F062B8000C0A620 /* Pods_SheneProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5465F8D87F062B8000C0A620 /* Pods_SheneProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SheneProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77006CE7212A85F10047FCC3 /* NewsModelResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModelResponse.swift; sourceTree = "<group>"; };
+		77006CE9212A89230047FCC3 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		77155ADC212A8F6600312076 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		77155AE0212A92AB00312076 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		77155AE6212A953F00312076 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
+		77155AE8212A968600312076 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		77155AEA212AA1D400312076 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		77155AEC212AA42300312076 /* News+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+TableView.swift"; sourceTree = "<group>"; };
+		77155AEE212AA44A00312076 /* Shop+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shop+TableView.swift"; sourceTree = "<group>"; };
+		77155AF0212AA49200312076 /* Shop+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shop+LocationManager.swift"; sourceTree = "<group>"; };
+		77155AF2212AA4DE00312076 /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		77155AF4212AA58D00312076 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		77155AF6212AA66D00312076 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		77155AF9212AA87200312076 /* ShopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
+		77155AFF212AB31C00312076 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
+		77155B01212AB36200312076 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		77155B03212AB58000312076 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		77155B05212AB95E00312076 /* Phone+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phone+TextField.swift"; sourceTree = "<group>"; };
+		77155B07212ABAA300312076 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		77155B10212AC1B700312076 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		77155B12212AC3D900312076 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		77155B14212AC43500312076 /* UserModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelResponse.swift; sourceTree = "<group>"; };
+		77155B16212AC5BD00312076 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		77E2AFC1212133F5007E22D2 /* SheneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E2AFC4212133F5007E22D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E2AFC6212133F5007E22D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +78,14 @@
 		77E2AFCE212133F5007E22D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E2AFD1212133F5007E22D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E2AFD3212133F5007E22D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E2AFD9212134FE007E22D2 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		77FF5BB021252EC800D0E81F /* APIClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientManager.swift; sourceTree = "<group>"; };
+		77FF922521255618002A942C /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		77FF92292125615F002A942C /* ShopModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModelResponse.swift; sourceTree = "<group>"; };
+		77FF922B212561A9002A942C /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		77FF922D2125629E002A942C /* APISelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISelected.swift; sourceTree = "<group>"; };
+		B47CF8E67221537D574B2F0F /* Pods-SheneProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheneProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SheneProject/Pods-SheneProject.debug.xcconfig"; sourceTree = "<group>"; };
+		CDA1C990931E2DB6C27BCACF /* Pods-SheneProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheneProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SheneProject/Pods-SheneProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +93,180 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F319DA4F4564D7C1027628CE /* Pods_SheneProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1127D445AD7BCA3626508504 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B47CF8E67221537D574B2F0F /* Pods-SheneProject.debug.xcconfig */,
+				CDA1C990931E2DB6C27BCACF /* Pods-SheneProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		624102C167937C3D2F7940E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5465F8D87F062B8000C0A620 /* Pods_SheneProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77155ADB212A8EB300312076 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				77155AE2212A93A200312076 /* Model */,
+				77155AE3212A93B700312076 /* View */,
+				77155AE4212A93C000312076 /* ViewModel */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		77155AE2212A93A200312076 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77E2AFD9212134FE007E22D2 /* NewsModel.swift */,
+				77006CE7212A85F10047FCC3 /* NewsModelResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77155AE3212A93B700312076 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77155AE5212A93CF00312076 /* Controller */,
+				77155AE0212A92AB00312076 /* NewsCell.xib */,
+				77155ADC212A8F6600312076 /* NewsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77155AE4212A93C000312076 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77FF922521255618002A942C /* NewsViewModel.swift */,
+				77155AE8212A968600312076 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77155AE5212A93CF00312076 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77006CE9212A89230047FCC3 /* NewsViewController.swift */,
+				77155AEC212AA42300312076 /* News+TableView.swift */,
+				77155AE6212A953F00312076 /* DetailNewsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77155AF8212AA6DE00312076 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				77155AFB212AB1F600312076 /* Model */,
+				77155AFC212AB20800312076 /* View */,
+				77155AFD212AB21300312076 /* ViewModel */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		77155AFB212AB1F600312076 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77FF92292125615F002A942C /* ShopModelResponse.swift */,
+				77FF922B212561A9002A942C /* ShopModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77155AFC212AB20800312076 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77155AFE212AB22200312076 /* Controllers */,
+				77155AF6212AA66D00312076 /* ShopCell.swift */,
+				77155AF9212AA87200312076 /* ShopCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77155AFD212AB21300312076 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77155AF2212AA4DE00312076 /* ShopViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77155AFE212AB22200312076 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77155AEA212AA1D400312076 /* ShopViewController.swift */,
+				77155AEE212AA44A00312076 /* Shop+TableView.swift */,
+				77155AF0212AA49200312076 /* Shop+LocationManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77155B0B212AC10300312076 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				77155B0D212AC14900312076 /* View */,
+				77155B0C212AC13E00312076 /* Model */,
+				77155B0F212AC16400312076 /* ViewModel */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		77155B0C212AC13E00312076 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77155B07212ABAA300312076 /* TokenModel.swift */,
+				77155AFF212AB31C00312076 /* SuccessModel.swift */,
+				77155B10212AC1B700312076 /* UserModel.swift */,
+				77155B14212AC43500312076 /* UserModelResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77155B0D212AC14900312076 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77155B0E212AC15500312076 /* Controllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77155B0E212AC15500312076 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77155B03212AB58000312076 /* ProfileViewController.swift */,
+				77155B16212AC5BD00312076 /* UserViewController.swift */,
+				77155B05212AB95E00312076 /* Phone+TextField.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77155B0F212AC16400312076 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77155B01212AB36200312076 /* ProfileViewModel.swift */,
+				77155B12212AC3D900312076 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		77E2AFB8212133F5007E22D2 = {
 			isa = PBXGroup;
 			children = (
 				77E2AFC3212133F5007E22D2 /* SheneProject */,
 				77E2AFC2212133F5007E22D2 /* Products */,
+				1127D445AD7BCA3626508504 /* Pods */,
+				624102C167937C3D2F7940E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +281,14 @@
 		77E2AFC3212133F5007E22D2 /* SheneProject */ = {
 			isa = PBXGroup;
 			children = (
+				77155AF4212AA58D00312076 /* Extention.swift */,
 				77E2AFC4212133F5007E22D2 /* AppDelegate.swift */,
+				77155B0B212AC10300312076 /* Profile */,
 				77E2AFC6212133F5007E22D2 /* ViewController.swift */,
+				77155ADB212A8EB300312076 /* News */,
+				77FF5BB021252EC800D0E81F /* APIClientManager.swift */,
+				77FF922D2125629E002A942C /* APISelected.swift */,
+				77155AF8212AA6DE00312076 /* Shop */,
 				77E2AFC8212133F5007E22D2 /* Main.storyboard */,
 				77E2AFCE212133F5007E22D2 /* Assets.xcassets */,
 				77E2AFD0212133F5007E22D2 /* LaunchScreen.storyboard */,
@@ -74,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77E2AFD6212133F5007E22D2 /* Build configuration list for PBXNativeTarget "SheneProject" */;
 			buildPhases = (
+				AC801C7BD0C7ECA5DC481CAC /* [CP] Check Pods Manifest.lock */,
 				77E2AFBD212133F5007E22D2 /* Sources */,
 				77E2AFBE212133F5007E22D2 /* Frameworks */,
 				77E2AFBF212133F5007E22D2 /* Resources */,
+				A580D9E138020D601BEA8ED4 /* [CP] Embed Pods Frameworks */,
+				1E388574180E05303C4F5EBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,20 +362,112 @@
 			files = (
 				77E2AFD2212133F5007E22D2 /* LaunchScreen.storyboard in Resources */,
 				77E2AFCF212133F5007E22D2 /* Assets.xcassets in Resources */,
+				77155AE1212A92AB00312076 /* NewsCell.xib in Resources */,
+				77155AFA212AA87200312076 /* ShopCell.xib in Resources */,
 				77E2AFCA212133F5007E22D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E388574180E05303C4F5EBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SheneProject/Pods-SheneProject-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SheneProject/Pods-SheneProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A580D9E138020D601BEA8ED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SheneProject/Pods-SheneProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SheneProject/Pods-SheneProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC801C7BD0C7ECA5DC481CAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SheneProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77E2AFBD212133F5007E22D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FF5BB121252EC800D0E81F /* APIClientManager.swift in Sources */,
+				77155AF1212AA49200312076 /* Shop+LocationManager.swift in Sources */,
+				77155B11212AC1B700312076 /* UserModel.swift in Sources */,
+				77155B02212AB36200312076 /* ProfileViewModel.swift in Sources */,
+				77006CE8212A85F20047FCC3 /* NewsModelResponse.swift in Sources */,
+				77155AED212AA42300312076 /* News+TableView.swift in Sources */,
+				77155AEB212AA1D400312076 /* ShopViewController.swift in Sources */,
+				77006CEA212A89230047FCC3 /* NewsViewController.swift in Sources */,
+				77155B08212ABAA300312076 /* TokenModel.swift in Sources */,
+				77FF922621255618002A942C /* NewsViewModel.swift in Sources */,
+				77155B04212AB58000312076 /* ProfileViewController.swift in Sources */,
+				77155B13212AC3D900312076 /* UserViewModel.swift in Sources */,
+				77155AF7212AA66D00312076 /* ShopCell.swift in Sources */,
+				77FF922C212561A9002A942C /* ShopModel.swift in Sources */,
+				77155AE7212A953F00312076 /* DetailNewsViewController.swift in Sources */,
+				77155B17212AC5BD00312076 /* UserViewController.swift in Sources */,
+				77155AEF212AA44A00312076 /* Shop+TableView.swift in Sources */,
+				77FF922A2125615F002A942C /* ShopModelResponse.swift in Sources */,
+				77E2AFDA212134FE007E22D2 /* NewsModel.swift in Sources */,
+				77FF922E2125629E002A942C /* APISelected.swift in Sources */,
 				77E2AFC7212133F5007E22D2 /* ViewController.swift in Sources */,
+				77155B15212AC43500312076 /* UserModelResponse.swift in Sources */,
 				77E2AFCD212133F5007E22D2 /* SheneProject.xcdatamodeld in Sources */,
+				77155ADD212A8F6600312076 /* NewsCell.swift in Sources */,
 				77E2AFC5212133F5007E22D2 /* AppDelegate.swift in Sources */,
+				77155AE9212A968600312076 /* DetailViewModel.swift in Sources */,
+				77155AF5212AA58D00312076 /* Extention.swift in Sources */,
+				77155AF3212AA4DE00312076 /* ShopViewModel.swift in Sources */,
+				77155B06212AB95E00312076 /* Phone+TextField.swift in Sources */,
+				77155B00212AB31C00312076 /* SuccessModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +602,13 @@
 		};
 		77E2AFD7212133F5007E22D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B47CF8E67221537D574B2F0F /* Pods-SheneProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R6KJ6QT78;
 				INFOPLIST_FILE = SheneProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pavelburdukovskii.SheneProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,11 +619,13 @@
 		};
 		77E2AFD8212133F5007E22D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA1C990931E2DB6C27BCACF /* Pods-SheneProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R6KJ6QT78;
 				INFOPLIST_FILE = SheneProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pavelburdukovskii.SheneProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
