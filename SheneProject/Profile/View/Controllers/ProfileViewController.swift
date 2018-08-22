@@ -17,9 +17,21 @@ class ProfileViewController : UIViewController {
     var validNumber = ""
     var checkDataAPI : String = ""
     let profileSegue : String = "profileSegue"
+    let goToUserInfo : String = "goToUserInfo"
     let pin = "0000"
+    var defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK : TO DO token and once show screen
+        self.printDebug("def = \(defaults.string(forKey: "token"))")
+        if let isToken = self.defaults.string(forKey: "token"), !isToken.isEmpty{
+//            self.printDebug("isToken = \(isToken)")
+//            let controller : UserViewController = UserViewController()
+//            tabBarController?.setViewControllers([controller], animated: true)
+            performSegue(withIdentifier: profileSegue, sender: isToken)
+        }
+        
         hideKeyboardWhenTappedAround()
         phoneTextField.delegate = self
         phoneTextField.text = ""
@@ -33,6 +45,10 @@ class ProfileViewController : UIViewController {
             self.setAlertController(data: self.data!)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+    }
     func setAlertController(data : SuccessModel){
         if let success = data.success, success {
             let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
@@ -45,7 +61,11 @@ class ProfileViewController : UIViewController {
                 alertA in
                  self.viewModel.getToken(api: APISelected.enterPin.rawValue, parameters: ["phone":Int(self.validNumber) as AnyObject, "pin": alert.textFields![0].text as AnyObject], headres: [:]){
                     self.tokenModel = self.viewModel.tokenModel
-                    self.performSegue(withIdentifier: self.profileSegue, sender: self.tokenModel?.token)
+                    guard let token = self.tokenModel?.token else {return}
+                    self.defaults.set(token, forKey: "token")
+                    
+                    self.performSegue(withIdentifier: self.profileSegue, sender: token)
+                    
                 }
             }
             

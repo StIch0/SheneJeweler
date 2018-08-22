@@ -15,6 +15,7 @@ class FeedBackViewController : UIViewController {
     @IBOutlet weak var textView : UITextView!
     let userSegue = "userSegue"
     override func viewDidLoad() {
+//        self
         super.viewDidLoad()
         title = "Введите сообщение"
         let amountOfLinesToBeShown:CGFloat = 6
@@ -25,6 +26,8 @@ class FeedBackViewController : UIViewController {
     private func goBack(){
         if let success = successModel?.success, success {
             self.showActionSheet("Спасибо за отзыв")
+//            self.dismiss(animated: true, completion: nil)
+            
         }
     }
     @IBAction func sendFeedBack(_ sender: Any) {
@@ -33,9 +36,9 @@ class FeedBackViewController : UIViewController {
             self.successModel = self.viewModel.successModel
             self.goBack()
          }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.65, execute: {
             self.performSegue(withIdentifier: self.userSegue, sender: self)
-        })
+//        })
         
     }
 }

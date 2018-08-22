@@ -18,7 +18,6 @@ class NewsViewModel : NSObject {
             for obj in self.newsList{
                 self.newsCellViewModelList.append(NewsCellViewModel(newsModel: obj))
             }
-            
             complete()
         }
     }

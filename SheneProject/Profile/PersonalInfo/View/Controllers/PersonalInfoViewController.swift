@@ -21,13 +21,41 @@ class PersonalInfoViewController  : UIViewController{
     @IBOutlet weak var flat : UITextField!
     var viewModel = PersonalInfoViewModel()
     var info : PersonalInfoModel?
+    var userModel : UserModel?
+    
+    
+
     var token : String = ""
-    var validBirthDate : Int64!
+    var validBirthDate : Int!
     var valideEmail : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         hideKeyboardWhenTappedAround()
         e_mail.addTarget(self, action: #selector(didEndEmailValidate), for: .editingDidEnd)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let model = userModel {
+            setDataOnField(user: model)
+        }
+    }
+    private func setDataOnField(user : UserModel){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+//        dateFormatter.timeZone =
+        self.name.text = user.name
+        self.secondName.text = user.surname
+        self.lastName.text = user.lastname
+        guard let birthDateInt = user.birthdate else { return }
+        self.birthDay.text = dateFormatter.string(from: Date(millis: (birthDateInt)))
+        self.e_mail.text = user.email
+        self.city.text = user.city
+        self.street.text = user.street
+        self.house.text = user.house
+        self.flat.text = user.flat
     }
     @IBAction func saveData(_ sender: UIButton) {
         printDebug("saveData")
@@ -66,6 +94,8 @@ class PersonalInfoViewController  : UIViewController{
         let dateFormater = DateFormatter()
         dateFormater.dateStyle = .medium
         dateFormater.timeStyle = .none
+        dateFormater.dateFormat = "dd-MM-yyyy"
+
         birthDay.text = dateFormater.string(from: sender.date)
         validBirthDate = sender.date.toMillis()
     }

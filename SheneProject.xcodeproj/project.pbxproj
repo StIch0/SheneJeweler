@@ -33,7 +33,6 @@
 		77155B15212AC43500312076 /* UserModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B14212AC43500312076 /* UserModelResponse.swift */; };
 		77155B17212AC5BD00312076 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155B16212AC5BD00312076 /* UserViewController.swift */; };
 		77E2AFC5212133F5007E22D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFC4212133F5007E22D2 /* AppDelegate.swift */; };
-		77E2AFC7212133F5007E22D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFC6212133F5007E22D2 /* ViewController.swift */; };
 		77E2AFCA212133F5007E22D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E2AFC8212133F5007E22D2 /* Main.storyboard */; };
 		77E2AFCD212133F5007E22D2 /* SheneProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77E2AFCB212133F5007E22D2 /* SheneProject.xcdatamodeld */; };
 		77E2AFCF212133F5007E22D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E2AFCE212133F5007E22D2 /* Assets.xcassets */; };
@@ -82,7 +81,6 @@
 		77155B16212AC5BD00312076 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		77E2AFC1212133F5007E22D2 /* SheneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E2AFC4212133F5007E22D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77E2AFC6212133F5007E22D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77E2AFC9212133F5007E22D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77E2AFCC212133F5007E22D2 /* SheneProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SheneProject.xcdatamodel; sourceTree = "<group>"; };
 		77E2AFCE212133F5007E22D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -337,7 +335,6 @@
 				77155AF4212AA58D00312076 /* Extention.swift */,
 				77E2AFC4212133F5007E22D2 /* AppDelegate.swift */,
 				77155B0B212AC10300312076 /* Profile */,
-				77E2AFC6212133F5007E22D2 /* ViewController.swift */,
 				77155ADB212A8EB300312076 /* News */,
 				77FF5BB021252EC800D0E81F /* APIClientManager.swift */,
 				77FF922D2125629E002A942C /* APISelected.swift */,
@@ -365,7 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				77FECF83212BBCEE000B18E3 /* PersonalInfoModeResponse.swift */,
-				77FECF85212BBE50000B18E3 /* PesonalInfoViewModel.swift */,
+				77FECF81212BBA89000B18E3 /* PersonalInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,7 +370,7 @@
 		77FECF89212BFC86000B18E3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				77FECF81212BBA89000B18E3 /* PersonalInfoModel.swift */,
+				77FECF85212BBE50000B18E3 /* PesonalInfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -558,7 +555,6 @@
 				77FF922A2125615F002A942C /* ShopModelResponse.swift in Sources */,
 				77E2AFDA212134FE007E22D2 /* NewsModel.swift in Sources */,
 				77FF922E2125629E002A942C /* APISelected.swift in Sources */,
-				77E2AFC7212133F5007E22D2 /* ViewController.swift in Sources */,
 				77155B15212AC43500312076 /* UserModelResponse.swift in Sources */,
 				77E2AFCD212133F5007E22D2 /* SheneProject.xcdatamodeld in Sources */,
 				77155ADD212A8F6600312076 /* NewsCell.swift in Sources */,

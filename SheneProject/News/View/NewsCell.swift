@@ -16,6 +16,7 @@ class NewsCell : UITableViewCell {
         didSet {
             guard let url = newsCellViewModel.img else { return  }
             img.sd_setImage(with: URL(string: "\(API_BASE_URL)/\(url)"))
+            
             caption.text = newsCellViewModel.caption
         }
     }

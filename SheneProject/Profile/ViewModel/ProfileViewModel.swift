@@ -21,6 +21,7 @@ class ProfileViewModel{
     func getToken ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete){
         self.apiClient.downloadToken(api: api, parameters: parameters, headres: headres){
             self.tokenModel = self.apiClient.tokenList
+            
             complete()
         }
     }

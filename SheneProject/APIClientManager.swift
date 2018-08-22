@@ -31,6 +31,7 @@ class APIClientManager: NSObject {
         let url = "\(API_BASE_URL)/v1/\(api)"
         Alamofire.request(url, method : .post, parameters : parameters ,headers : headers).responseObject{
             (respone : DataResponse<NewsModelResponse>) in
+            
             let list = respone.result.value
             if let newsModel = list?.news{
                 for (_,new) in newsModel.enumerated(){
@@ -83,6 +84,7 @@ class APIClientManager: NSObject {
         let url = "\(API_BASE_URL)/v1/\(api)"
         Alamofire.request(url, method : .post, parameters : parameters ,headers : headres).responseObject{
             (respone : DataResponse<UserModelResponse>) in
+            
             let list = respone.result.value
             if let userModel = list?.user{
                 self.userList = (userModel)

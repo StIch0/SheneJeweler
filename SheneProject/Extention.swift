@@ -57,18 +57,18 @@ extension String {
 }
 extension String {
     func isValidEmail() -> Bool {
-        // here, `try!` will always succeed because the pattern is valid
+        // here, try! will always succeed because the pattern is valid
         let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
         return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
     }
 }
 extension Date {
     
-    func toMillis() -> Int64! {
-        return Int64(self.timeIntervalSince1970 * 1000)
+    func toMillis() -> Int! {
+        return Int(self.timeIntervalSince1970 * 1000)
     }
     
-    init(millis: Int64) {
+    init(millis: Int) {
         self = Date(timeIntervalSince1970: TimeInterval(millis / 1000))
         self.addTimeInterval(TimeInterval(Double(millis % 1000) / 1000 ))
     }
