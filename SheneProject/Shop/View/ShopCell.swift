@@ -12,12 +12,19 @@ class ShopCell : UITableViewCell {
     @IBOutlet weak var address : UILabel!
     @IBOutlet weak var workTime : UILabel!
     @IBOutlet weak var phone : UILabel!
+    weak var shopCellViewModel : ShopCellViewModel! {
+        didSet {
+            address.text = shopCellViewModel.address
+            workTime.text = shopCellViewModel.workTime
+            phone.text = shopCellViewModel.phone
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func loadData(from shopModel : ShopModel){
-        address.text = shopModel.address
-        workTime.text = shopModel.worktime
-        phone.text = shopModel.phone
-    }
+//    func loadData(from shopModel : ShopModel){
+//        address.text = shopModel.address
+//        workTime.text = shopModel.worktime
+//        phone.text = shopModel.phone
+//    }
 }

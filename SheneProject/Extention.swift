@@ -8,9 +8,23 @@
 
 import Foundation
 import UIKit
-func printDebug(_ message : Any) -> Void {
-    print("************************* \n \(message) \n *************************")
+
+extension UIViewController {
+    func showActionSheet(_ message : String){
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .actionSheet)
+        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            alert.dismiss(animated: true, completion: nil)
+        })
+        
+    }
+    func printDebug(_ message : Any...) -> Void {
+        for mes in message {
+            print("************************* \n \(mes) \n ************************* \n")
+        }
+    }
 }
+
 extension UIColor
 {
     static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alph: CGFloat = 1) -> UIColor
@@ -40,4 +54,23 @@ extension String {
     func validPhoneNumber()->String{
         return String(self.dropFirst(2))
     }
+}
+extension String {
+    func isValidEmail() -> Bool {
+        // here, `try!` will always succeed because the pattern is valid
+        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+    }
+}
+extension Date {
+    
+    func toMillis() -> Int64! {
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
+    
+    init(millis: Int64) {
+        self = Date(timeIntervalSince1970: TimeInterval(millis / 1000))
+        self.addTimeInterval(TimeInterval(Double(millis % 1000) / 1000 ))
+    }
+    
 }

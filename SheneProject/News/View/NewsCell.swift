@@ -12,13 +12,19 @@ import SDWebImage
 class NewsCell : UITableViewCell {
     @IBOutlet weak var img : UIImageView!
     @IBOutlet weak var caption : UILabel!
-    
+    weak var newsCellViewModel : NewsCellViewModel! {
+        didSet {
+            guard let url = newsCellViewModel.img else { return  }
+            img.sd_setImage(with: URL(string: "\(API_BASE_URL)/\(url)"))
+            caption.text = newsCellViewModel.caption
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func loadData(from newsModel : NewsModel){
-        guard let url = newsModel.img else { return  }
-        img.sd_setImage(with: URL(string: "\(API_BASE_URL)/\(url)"))
-        caption.text = newsModel.caption
-    }
+//    func loadData(from newsModel : NewsModel){
+//        guard let url = newsModel.img else { return  }
+//        img.sd_setImage(with: URL(string: "\(API_BASE_URL)/\(url)"))
+//        caption.text = newsModel.caption
+//    }
 }

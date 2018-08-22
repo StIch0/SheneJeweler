@@ -13,5 +13,7 @@ enum APISelected : String {
     case enterPhone = "enterPhone"
     case enterPin = "enterPin"
     case getUserInfo = "getUserInfo"
+    case updateinfo = "updateinfo"
+    case sendFeedback = "sendFeedback"
 }
 

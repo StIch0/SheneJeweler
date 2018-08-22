@@ -17,7 +17,8 @@ extension NewsViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! NewsCell
-        cell.loadData(from: data[indexPath.row])
+        cell.newsCellViewModel = self.viewModel.cellViewModel(at: indexPath.row)
+       // cell.loadData(from: data[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

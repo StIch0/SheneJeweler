@@ -15,7 +15,8 @@ extension ShopViewController : UITableViewDataSource, UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ShopCell
-        cell.loadData(from: data[indexPath.row])
+        cell.shopCellViewModel = self.viewModel.cellViewModel(at: indexPath.row)
+        //cell.loadData(from: data[indexPath.row])
         guard   let lat = data[indexPath.row].lat,
                 let lng = data[indexPath.row].lng,
                 let fLat = data[0].lat,

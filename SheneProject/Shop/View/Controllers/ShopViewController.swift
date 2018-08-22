@@ -58,7 +58,7 @@ class ShopViewController : UIViewController {
     private func loadData(){
         printDebug("loadData")
         self.viewModel.getShops(api: APISelected.shops.rawValue, parameters: [:], headres: [:]){
-            printDebug("address = \(self.viewModel.shopList.first?.address)")
+            self.printDebug("address = \(self.viewModel.shopList.first?.address)")
             self.data = self.viewModel.shopList
             self.tableView.reloadData()
         }
