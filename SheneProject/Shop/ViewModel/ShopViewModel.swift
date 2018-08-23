@@ -11,14 +11,17 @@ class ShopViewModel {
     private var apiClient = APIClientManager()
     var shopList = [ShopModel]()
     var shopCellViewModelList = [ShopCellViewModel]()
-    func getShops ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete){
-        self.apiClient.downloadShop(api: api, parameters: parameters, headres: headres){
+    func getShops ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete, _ unComplete : @escaping DownloadError){
+        self.apiClient.downloadShop(api: api, parameters: parameters, headres: headres, {
             self.shopList = self.apiClient.shopList
             for obj in self.shopList {
                 self.shopCellViewModelList.append(ShopCellViewModel(shopModel: obj))
             }
             complete()
-        }
+        }, {
+            error in
+            unComplete(error)
+        })
     }
     func numberOfItem()->Int{
         return shopList.count

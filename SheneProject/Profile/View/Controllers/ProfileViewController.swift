@@ -16,7 +16,7 @@ class ProfileViewController : UIViewController {
     var tokenModel : TokenModel?
     var validNumber = ""
     var checkDataAPI : String = ""
-    let profileSegue : String = "profileSegue"
+    
     let goToUserInfo : String = "goToUserInfo"
     let pin = "0000"
     var defaults = UserDefaults.standard
@@ -24,14 +24,16 @@ class ProfileViewController : UIViewController {
         super.viewDidLoad()
         
         //MARK : TO DO token and once show screen
-        self.printDebug("def = \(defaults.string(forKey: "token"))")
-        if let isToken = self.defaults.string(forKey: "token"), !isToken.isEmpty{
-//            self.printDebug("isToken = \(isToken)")
-//            let controller : UserViewController = UserViewController()
-//            tabBarController?.setViewControllers([controller], animated: true)
-            performSegue(withIdentifier: profileSegue, sender: isToken)
-        }
-        
+//        self.printDebug("def = \(defaults.string(forKey: "token"))")
+//        if let isToken = self.defaults.string(forKey: "token"), !isToken.isEmpty{
+////            self.printDebug("isToken = \(isToken)")
+////            let controller : UserViewController = UserViewController()
+////            tabBarController?.setViewControllers([controller], animated: true)
+//            performSegue(withIdentifier: profileSegue, sender: isToken)
+//        }
+//        phoneTextField = UITextField()
+//        sendPhoneButton = UIButton()
+//        data
         hideKeyboardWhenTappedAround()
         phoneTextField.delegate = self
         phoneTextField.text = ""
@@ -40,10 +42,13 @@ class ProfileViewController : UIViewController {
     }
 
     @IBAction func sendPhoneButtonAction(_ sender: Any) {
-        viewModel.getSuccess(api: APISelected.enterPhone.rawValue, parameters: ["phone":Int(validNumber) as AnyObject], headres: [:]){
+        viewModel.getSuccess(api: APISelected.enterPhone.rawValue, parameters: ["phone":Int(validNumber) as AnyObject], headres: [:],{
             self.data =  self.viewModel.successModel
             self.setAlertController(data: self.data!)
-        }
+        },{
+            error in
+            self.showActionSheet(error)
+        })
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -59,14 +64,17 @@ class ProfileViewController : UIViewController {
             })
             let actionAlert = UIAlertAction(title: "Отправить", style: .default){
                 alertA in
-                 self.viewModel.getToken(api: APISelected.enterPin.rawValue, parameters: ["phone":Int(self.validNumber) as AnyObject, "pin": alert.textFields![0].text as AnyObject], headres: [:]){
+                 self.viewModel.getToken(api: APISelected.enterPin.rawValue, parameters: ["phone":Int(self.validNumber) as AnyObject, "pin": alert.textFields![0].text as AnyObject], headres: [:],{
                     self.tokenModel = self.viewModel.tokenModel
                     guard let token = self.tokenModel?.token else {return}
                     self.defaults.set(token, forKey: "token")
+                    self.dismiss(animated: true, completion: nil)
+                    //self.performSegue(withIdentifier: self.goToUserInfo, sender: token)
                     
-                    self.performSegue(withIdentifier: self.profileSegue, sender: token)
-                    
-                }
+                 },{
+                    error in
+                        self.showActionSheet(error)
+                 })
             }
             
             alert.addAction(actionAlert)
@@ -77,6 +85,9 @@ class ProfileViewController : UIViewController {
         let controller = segue.destination as! UserViewController
         let token = sender as! String
         controller.token = token
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        tabBarController?.hidesBottomBarWhenPushed = false
     }
     @objc func changeValueNumber(){
         guard let text = phoneTextField.text else { return}

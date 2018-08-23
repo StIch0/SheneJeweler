@@ -12,14 +12,17 @@ class NewsViewModel : NSObject {
     var newsList = [NewsModel]()
     var newsCellViewModelList = [NewsCellViewModel]()
     var detailViewModel : DetailViewModel!
-    func getNews ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete){
-        self.apiClient.downloadNews(api: api, parameters: parameters, headers: headres){
+    func getNews ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete, _ unComplete : @escaping DownloadError){
+        self.apiClient.downloadNews(api: api, parameters: parameters, headers: headres, {
             self.newsList = self.apiClient.newslist
             for obj in self.newsList{
                 self.newsCellViewModelList.append(NewsCellViewModel(newsModel: obj))
             }
             complete()
-        }
+        }, {
+            error in
+            unComplete(error)
+        })
     }
     func numberOfItem()->Int{
         return newsList.count

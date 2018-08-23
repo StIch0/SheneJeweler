@@ -25,10 +25,13 @@ class NewsViewController : UIViewController {
         loadData()
     }
     func loadData(){
-        viewModel.getNews(api: APISelected.news.rawValue, parameters: [:], headres: [:]){
+        viewModel.getNews(api: APISelected.news.rawValue, parameters: [:], headres: [:], {
             self.data = self.viewModel.newsList
             self.tableView.reloadData()
-        }
+        }, {
+            error in
+            self.showActionSheet(error)
+        })
     }
 }
 

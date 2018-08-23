@@ -57,11 +57,14 @@ class ShopViewController : UIViewController {
     }
     private func loadData(){
         printDebug("loadData")
-        self.viewModel.getShops(api: APISelected.shops.rawValue, parameters: [:], headres: [:]){
-            self.printDebug("address = \(self.viewModel.shopList.first?.address)")
+        self.viewModel.getShops(api: APISelected.shops.rawValue, parameters: [:], headres: [:],{
+//            self.printDebug("address = \(self.viewModel.shopList.first?.address)")
             self.data = self.viewModel.shopList
             self.tableView.reloadData()
-        }
+        },{
+            error in
+            self.showActionSheet(error)
+        })
     }
     @IBAction func findMyself(_ sender: UIButton) {
         //printDebug("findMyself \(currentLocation)")

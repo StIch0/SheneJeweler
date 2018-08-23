@@ -10,10 +10,13 @@ import Foundation
 class PersonalInfoViewModel {
     private var apiClient = APIClientManager()
     var personalModel : PersonalInfoModel?
-    func getInfo ( api : String, parameters : [String : AnyObject], headers : [String : String],_ complete : @escaping DownloadComplete){
-        self.apiClient.downloadPersonalInfoResponse(api: api, parameters: parameters, headers: headers){
+    func getInfo ( api : String, parameters : [String : AnyObject], headers : [String : String],_ complete : @escaping DownloadComplete, _ unComplete : @escaping DownloadError){
+        self.apiClient.downloadPersonalInfoResponse(api: api, parameters: parameters, headers: headers, {
             self.personalModel = self.apiClient.infoList
              complete()
-        }
+        }, {
+            error in
+            unComplete(error)
+        })
     }
 }

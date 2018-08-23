@@ -9,8 +9,8 @@
 import Foundation
 import ObjectMapper
 class UserModel : Mappable {
-    var     bonuscard : [AnyObject]?
-    var     discountcard : [AnyObject]?
+    var     bonuscard : [BonusCardModel]?
+    var     discountcard : [DiscountCardModel]?
     var     phone : Int?
     var     playerid : AnyObject?
     var     birthdate : Int?

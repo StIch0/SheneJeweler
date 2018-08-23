@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edO-oN-cMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="107"/>
+            <point key="canvasLocation" x="2260" y="106.59670164917542"/>
         </scene>
         <!--Detail News View Controller-->
         <scene sceneID="zdC-CR-ops">
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3B-5g-1Ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942" y="107"/>
+            <point key="canvasLocation" x="3280.8000000000002" y="106.59670164917542"/>
         </scene>
         <!--Personal Info View Controller-->
         <scene sceneID="Rzl-i5-eTe">
@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulx-LF-gVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1494" y="1058"/>
+            <point key="canvasLocation" x="-1518" y="1376"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="pbz-YD-FY1">
@@ -294,7 +294,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 000000000000 (5%)  9999,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBI-4N-G4z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 000000000000 (0%)  0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBI-4N-G4z">
                                 <rect key="frame" x="20" y="155" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -309,6 +309,9 @@
                                 <state key="normal" title="Добавить дисконтную карту">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addDiscountCard:" destination="GNs-wd-ELH" eventType="touchUpInside" id="Xel-x1-jhe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бонусные карты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-jx-5pA">
                                 <rect key="frame" x="20" y="236" width="335" height="21"/>
@@ -319,7 +322,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" № 00000000000 500.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEB-zM-8mf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" № 00000000000 0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEB-zM-8mf">
                                 <rect key="frame" x="20" y="272" width="335" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="V3w-sN-uYz"/>
@@ -328,7 +331,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Действительна до" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-ZX-lG0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="действительна до" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-ZX-lG0">
                                 <rect key="frame" x="20" y="298" width="335" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bux-ey-NXh"/>
@@ -346,6 +349,9 @@
                                 <state key="normal" title="Добавить бонусную карту">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addBonusCard:" destination="GNs-wd-ELH" eventType="touchUpInside" id="4W0-hr-5mr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пригласите друга и получите 500 бонусов на баланс" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5h-CN-2SG">
                                 <rect key="frame" x="80" y="369" width="215" height="33.5"/>
@@ -369,20 +375,8 @@
                                     <constraint firstAttribute="height" constant="21" id="cft-Ky-HKm"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-Xk-bIB">
-                                <rect key="frame" x="20" y="448.5" width="335" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Ipf-Uf-8qt"/>
-                                </constraints>
-                                <state key="normal" title="Избранные товары" image="traffic_slow.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="chosenProduct:" destination="GNs-wd-ELH" eventType="touchUpInside" id="Zi7-Qi-th6"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-24-K7U">
-                                <rect key="frame" x="20" y="488.5" width="335" height="20"/>
+                                <rect key="frame" x="20" y="448.5" width="335" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="d5l-ob-DQu"/>
                                 </constraints>
@@ -394,7 +388,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="142-yQ-p5G">
-                                <rect key="frame" x="20" y="528.5" width="335" height="30"/>
+                                <rect key="frame" x="20" y="488.5" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LSA-jq-3qI"/>
                                 </constraints>
@@ -416,17 +410,15 @@
                             <constraint firstItem="142-yQ-p5G" firstAttribute="top" secondItem="R9l-24-K7U" secondAttribute="bottom" constant="20" id="AHj-cY-qCA"/>
                             <constraint firstItem="cIL-2m-k3j" firstAttribute="top" secondItem="gP0-ZX-lG0" secondAttribute="bottom" constant="15" id="BxI-7E-aZT"/>
                             <constraint firstItem="IBI-4N-G4z" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="20" id="CmV-mB-OdI"/>
-                            <constraint firstItem="Kpb-Xk-bIB" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="20" id="Eh8-35-4ea"/>
                             <constraint firstItem="8cg-jx-5pA" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="20" id="ElC-zY-W2u"/>
                             <constraint firstItem="8cg-jx-5pA" firstAttribute="top" secondItem="Vsg-yq-2Iw" secondAttribute="bottom" constant="15" id="IvP-ra-e5X"/>
-                            <constraint firstItem="XbE-tS-3jr" firstAttribute="trailing" secondItem="Kpb-Xk-bIB" secondAttribute="trailing" constant="20" id="KCR-O9-Naq"/>
                             <constraint firstItem="XbE-tS-3jr" firstAttribute="trailing" secondItem="hEB-zM-8mf" secondAttribute="trailing" constant="20" id="PzO-Cq-ylZ"/>
                             <constraint firstItem="0hk-p3-Ro0" firstAttribute="top" secondItem="DdP-JX-3IP" secondAttribute="bottom" constant="15" id="QXw-HF-kaQ"/>
                             <constraint firstItem="142-yQ-p5G" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="20" id="QiP-PT-BJx"/>
+                            <constraint firstItem="R9l-24-K7U" firstAttribute="top" secondItem="xxy-KT-gA6" secondAttribute="bottom" constant="20" id="UUd-nT-hup"/>
                             <constraint firstItem="R9l-24-K7U" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="20" id="Uay-xo-K79"/>
                             <constraint firstItem="IBI-4N-G4z" firstAttribute="top" secondItem="0hk-p3-Ro0" secondAttribute="bottom" constant="15" id="Uub-jp-OUA"/>
                             <constraint firstItem="XbE-tS-3jr" firstAttribute="trailing" secondItem="xxy-KT-gA6" secondAttribute="trailing" constant="20" id="VwM-yc-Wy1"/>
-                            <constraint firstItem="Kpb-Xk-bIB" firstAttribute="top" secondItem="xxy-KT-gA6" secondAttribute="bottom" constant="20" id="WGr-IE-JvI"/>
                             <constraint firstItem="XbE-tS-3jr" firstAttribute="trailing" secondItem="8cg-jx-5pA" secondAttribute="trailing" constant="20" id="XPv-IK-zPC"/>
                             <constraint firstItem="08Z-k3-mEM" firstAttribute="top" secondItem="cIL-2m-k3j" secondAttribute="bottom" constant="10" id="XXX-7k-z3b"/>
                             <constraint firstItem="XbE-tS-3jr" firstAttribute="trailing" secondItem="R9l-24-K7U" secondAttribute="trailing" constant="20" id="XzX-9M-fFH"/>
@@ -448,7 +440,6 @@
                             <constraint firstItem="Vsg-yq-2Iw" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="20" id="vTg-FB-b8t"/>
                             <constraint firstItem="XbE-tS-3jr" firstAttribute="trailing" secondItem="142-yQ-p5G" secondAttribute="trailing" constant="20" id="vr0-qz-9lC"/>
                             <constraint firstItem="n5h-CN-2SG" firstAttribute="leading" secondItem="XbE-tS-3jr" secondAttribute="leading" constant="80" id="xQL-3G-Eiv"/>
-                            <constraint firstItem="R9l-24-K7U" firstAttribute="top" secondItem="Kpb-Xk-bIB" secondAttribute="bottom" constant="20" id="zPX-IB-M7k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XbE-tS-3jr"/>
                     </view>
@@ -459,13 +450,14 @@
                         <outlet property="balanse" destination="DdP-JX-3IP" id="fzJ-R1-Zdn"/>
                         <outlet property="bonuscard" destination="hEB-zM-8mf" id="drh-Ys-4kS"/>
                         <outlet property="discontcard" destination="IBI-4N-G4z" id="iQC-84-ZpV"/>
+                        <outlet property="expirationDate" destination="gP0-ZX-lG0" id="cO8-qe-nlG"/>
                         <segue destination="Npp-tS-0Fn" kind="show" identifier="personalInfoSegue" id="UEX-5y-LBC"/>
                         <segue destination="w9f-Sv-cqZ" kind="show" identifier="feedBackSegue" id="28Y-1U-C3A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSW-fY-dzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1986" y="179"/>
+            <point key="canvasLocation" x="-1993" y="415"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="kYT-b3-Q4p">
@@ -476,7 +468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="712-Y1-nE0">
-                                <rect key="frame" x="8" y="30" width="359" height="20"/>
+                                <rect key="frame" x="8" y="74" width="359" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="uLQ-cB-1Hr"/>
                                 </constraints>
@@ -485,7 +477,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RnZ-dH-NTb">
-                                <rect key="frame" x="50" y="95" width="275" height="30"/>
+                                <rect key="frame" x="50" y="139" width="275" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="orE-cP-Vsb"/>
                                 </constraints>
@@ -494,7 +486,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hz-lV-IAE">
-                                <rect key="frame" x="100" y="155" width="175" height="35"/>
+                                <rect key="frame" x="100" y="199" width="175" height="35"/>
                                 <color key="backgroundColor" red="0.01505137754371192" green="0.018063927664974666" blue="0.0058113622736886208" alpha="0.2966609589041096" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="KbB-X4-YEd"/>
@@ -507,7 +499,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="После авторизации у Вас будет возможность проверить баланс бонусных и дисконтных карт, приглашать друзей и многое другое" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e81-FQ-hAA">
-                                <rect key="frame" x="50" y="220" width="275" height="67"/>
+                                <rect key="frame" x="50" y="264" width="275" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -548,12 +540,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOD-1G-Erk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1212" y="-436"/>
+            <point key="canvasLocation" x="-2362" y="-581"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar View Controller-->
         <scene sceneID="oht-cp-ahg">
             <objects>
-                <tabBarController id="9sf-lt-eKO" sceneMemberID="viewController">
+                <tabBarController id="9sf-lt-eKO" customClass="CustomTabBarViewController" customModule="SheneProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xMC-CN-71l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -563,11 +555,12 @@
                         <segue destination="FsW-br-0Yi" kind="relationship" relationship="viewControllers" id="dZG-er-bJM"/>
                         <segue destination="ARB-e7-HpB" kind="relationship" relationship="viewControllers" id="7S6-1z-T9q"/>
                         <segue destination="F9l-Xd-uKw" kind="relationship" relationship="viewControllers" id="ZK4-PU-wvB"/>
+                        <segue destination="dAU-yB-laL" kind="show" identifier="profileSegue" animates="NO" id="nls-Uk-cL3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijm-wg-6KL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167.19999999999999" y="106.59670164917542"/>
+            <point key="canvasLocation" x="506.39999999999998" y="106.59670164917542"/>
         </scene>
         <!--Акции-->
         <scene sceneID="3IC-vf-2oC">
@@ -586,7 +579,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCs-xq-gyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="107"/>
+            <point key="canvasLocation" x="1463.2" y="106.59670164917542"/>
         </scene>
         <!--Shop View Controller-->
         <scene sceneID="f3f-Rb-0bq">
@@ -717,7 +710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDA-6J-LDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2521" y="1059"/>
+            <point key="canvasLocation" x="-2500" y="1376"/>
         </scene>
         <!--Магазины-->
         <scene sceneID="DZY-2o-8vJ">
@@ -750,18 +743,37 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GNs-wd-ELH" kind="relationship" relationship="rootViewController" id="8pz-XX-TFo"/>
+                        <segue destination="GNs-wd-ELH" kind="relationship" relationship="rootViewController" id="w5n-OB-3pZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdh-W0-Vko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem id="hry-Bu-Xsw"/>
             </objects>
             <point key="canvasLocation" x="-703" y="502"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vff-Hx-Ld2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dAU-yB-laL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="Ca1-dS-Ug3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HZE-Jf-CQU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h6Y-Wj-18y" kind="relationship" relationship="rootViewController" id="wPR-Vz-4tM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pK-l5-RHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1335" y="-580"/>
         </scene>
     </scenes>
     <resources>
         <image name="bubble_left.png" width="31" height="55"/>
         <image name="button_compass.png" width="40" height="40"/>
         <image name="road_2-1.png" width="2" height="1"/>
-        <image name="traffic_slow.png" width="18" height="220"/>
     </resources>
 </document>

@@ -15,5 +15,6 @@ enum APISelected : String {
     case getUserInfo = "getUserInfo"
     case updateinfo = "updateinfo"
     case sendFeedback = "sendFeedback"
+    case addCard = "addCard"
 }
 

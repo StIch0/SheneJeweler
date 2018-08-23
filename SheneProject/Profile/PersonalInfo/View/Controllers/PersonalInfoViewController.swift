@@ -37,6 +37,7 @@ class PersonalInfoViewController  : UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if let model = userModel {
+            printDebug("model.name = \(model.name ?? "NAME")")
             setDataOnField(user: model)
         }
     }
@@ -76,12 +77,15 @@ class PersonalInfoViewController  : UIViewController{
             "city": city as AnyObject,
             "street": street as AnyObject,
             "house": house as AnyObject,
-            "flat": flat as AnyObject], headers: ["auth": token]){
+            "flat": flat as AnyObject], headers: ["auth": token], {
 
                 self.info = self.viewModel.personalModel
-                self.printDebug(self.info)
+                self.printDebug(self.info?.name)
                 self.showActionSheet("Изменения сохранены")
-        }
+        }, {
+          error in
+            self.showActionSheet(error)
+        })
     }
 
     @IBAction func didBeginTextFieldDate(_ sender: UITextField) {

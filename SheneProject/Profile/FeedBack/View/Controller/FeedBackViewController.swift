@@ -13,9 +13,8 @@ class FeedBackViewController : UIViewController {
     var viewModel = FeedBackViewModel()
     var token : String = ""
     @IBOutlet weak var textView : UITextView!
-    let userSegue = "userSegue"
+//    let userSegue = "userSegue"
     override func viewDidLoad() {
-//        self
         super.viewDidLoad()
         title = "Введите сообщение"
         let amountOfLinesToBeShown:CGFloat = 6
@@ -23,22 +22,18 @@ class FeedBackViewController : UIViewController {
         textView.sizeThatFits(CGSize(width: textView.frame.width, height: maxHeight))
         
     }
-    private func goBack(){
-        if let success = successModel?.success, success {
-            self.showActionSheet("Спасибо за отзыв")
-//            self.dismiss(animated: true, completion: nil)
-            
-        }
-    }
     @IBAction func sendFeedBack(_ sender: Any) {
         let text = textView.text != "" ? textView.text : "Нет сообщения"
-         viewModel.getSuccess(api: APISelected.sendFeedback.rawValue, parameters: ["content":text as AnyObject], headres: ["auth":token]){
+         viewModel.getSuccess(api: APISelected.sendFeedback.rawValue, parameters: ["content":text as AnyObject], headres: ["auth":token],{
             self.successModel = self.viewModel.successModel
-            self.goBack()
-         }
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.65, execute: {
-            self.performSegue(withIdentifier: self.userSegue, sender: self)
-//        })
+            if let success = self.successModel?.success, success {
+                self.showActionSheet("Спасибо за отзыв")
+            }
+         },{
+            error in
+            self.showActionSheet(error)
+         })
+//            self.performSegue(withIdentifier: self.userSegue, sender: self)
         
     }
 }

@@ -17,7 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "token")
+//        let newsController: NewsViewController = NewsViewController()
+//        let shopController: ShopViewController = ShopViewController()
+//        let userController: UserViewController = UserViewController()
+//        let autoController: ProfileViewController = ProfileViewController()
+//        let tabBarController : UITabBarController = UITabBarController()
+//        let token = defaults.string(forKey: "token")
+//        if let unWrapToken = token, unWrapToken.isEmpty{
+//            tabBarController.viewControllers = [newsController, shopController,userController,autoController]
+//        }
         
         return true
     }

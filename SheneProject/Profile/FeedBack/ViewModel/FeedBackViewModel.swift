@@ -11,10 +11,13 @@ import Foundation
 class FeedBackViewModel {
     private var apiClient = APIClientManager()
     var successModel : SuccessModel?
-    func getSuccess ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete){
-        self.apiClient.downloadFeedBack(api: api, parameters: parameters, headres: headres){
+    func getSuccess ( api : String, parameters : [String : AnyObject], headres : [String : String],_ complete : @escaping DownloadComplete, _ unComplete : @escaping DownloadError){
+        self.apiClient.downloadFeedBack(api: api, parameters: parameters, headres: headres,{
             self.successModel = self.apiClient.successList
             complete()
-        }
+        },{
+            error in
+            unComplete(error)
+        })
     }
 }
