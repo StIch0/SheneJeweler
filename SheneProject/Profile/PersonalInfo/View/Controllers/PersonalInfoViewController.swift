@@ -25,7 +25,7 @@ class PersonalInfoViewController  : UIViewController{
     
     
 
-    var token : String = ""
+    var token : String = UserDefaults.standard.string(forKey: "token")!
     var validBirthDate : Int!
     var valideEmail : String = ""
     override func viewDidLoad() {

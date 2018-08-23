@@ -112,7 +112,7 @@ class APIClientManager: NSObject {
             case .failure(let error):
                 print("ERROR = \(error.localizedDescription)")
                 unComplete(error.localizedDescription)
-        }
+            }
         }
     }
     //MARK : load personal info, more value, than user info ______________________________________________________________________________
@@ -152,10 +152,10 @@ class APIClientManager: NSObject {
     func downloadCard(api : String, parameters : [String : AnyObject], headres : [String : String] , _ complete : @escaping DownloadComplete, _ unComplete : @escaping DownloadError){
         let url = "\(API_BASE_URL)/v1/\(api)"
         Alamofire.request(url, method : .post, parameters : parameters ,headers : headres).responseObject{
-            (respone : DataResponse<UserModel>) in
+            (respone : DataResponse<UserModelResponse>) in
             switch respone.result{
             case .success(let value):
-                let userModel = value
+                let userModel = value.user
                 self.userList = (userModel)
                 complete()
             case .failure(let error):

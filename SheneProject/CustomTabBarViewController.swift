@@ -14,16 +14,17 @@ class CustomTabBarViewController: UITabBarController , UITabBarControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.delegate = self
+        
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if let title = item.title, title == "Профиль"{
-            if let token = defauls.string(forKey: "token"){
-                    if token.isEmpty{
-                        printDebug("token = \(token)")
-                        performSegue(withIdentifier: profileSegue, sender: self)
-                }
-
+            if defauls.string(forKey: "token") == nil{
+                printDebug("NIL")
+                performSegue(withIdentifier: profileSegue, sender: self)
+            }else {
+                printDebug(defauls.string(forKey: "token"))
             }
+
         }
         printDebug(item.title)
     }

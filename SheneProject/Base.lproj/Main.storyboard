@@ -459,7 +459,7 @@
             </objects>
             <point key="canvasLocation" x="-1993" y="415"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Профиль-->
         <scene sceneID="kYT-b3-Q4p">
             <objects>
                 <viewController id="h6Y-Wj-18y" customClass="ProfileViewController" customModule="SheneProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -505,7 +505,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизуясь, Вы соглашаетесь на обработку персональных данных согласно нашей политике конфиденциальности" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-pm-weF">
-                                <rect key="frame" x="50" y="580" width="275" height="67"/>
+                                <rect key="frame" x="50" y="531" width="275" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -532,7 +532,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zN2-Ta-xRn"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" id="ZGC-5h-bJg"/>
                     <navigationItem key="navigationItem" id="jWr-4y-cyU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="phoneTextField" destination="RnZ-dH-NTb" id="rPf-m5-ZgZ"/>
                         <outlet property="sendPhoneButton" destination="9hz-lV-IAE" id="qQC-r9-PpP"/>

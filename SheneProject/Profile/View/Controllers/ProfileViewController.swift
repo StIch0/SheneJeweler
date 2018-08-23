@@ -34,6 +34,8 @@ class ProfileViewController : UIViewController {
 //        phoneTextField = UITextField()
 //        sendPhoneButton = UIButton()
 //        data
+        tabBarController?.hidesBottomBarWhenPushed = false
+//        tabBarController
         hideKeyboardWhenTappedAround()
         phoneTextField.delegate = self
         phoneTextField.text = ""
@@ -68,7 +70,8 @@ class ProfileViewController : UIViewController {
                     self.tokenModel = self.viewModel.tokenModel
                     guard let token = self.tokenModel?.token else {return}
                     self.defaults.set(token, forKey: "token")
-                    self.dismiss(animated: true, completion: nil)
+                    self.printDebug("TOKEN = \(self.defaults.string(forKey: "token"))")
+                  self.dismiss(animated: true, completion: nil)
                     //self.performSegue(withIdentifier: self.goToUserInfo, sender: token)
                     
                  },{
@@ -79,6 +82,7 @@ class ProfileViewController : UIViewController {
             
             alert.addAction(actionAlert)
             present(alert, animated: true, completion: nil)
+//
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

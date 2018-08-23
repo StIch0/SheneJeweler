@@ -26,20 +26,33 @@ class UserViewController : UIViewController {
     private let feedBackSegue = "feedBackSegue"
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        tabBarController?.hidesBottomBarWhenPushed = false
-        if let tokenDef = defaults.string(forKey: "token"){
-            token = tokenDef
+//        navigationController?.isNavigationBarHidden = false
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//        tabBarController?.hidesBottomBarWhenPushed = false
+       
+//        if let tokenDef = defaults.string(forKey: "token"){
+//            token = tokenDef
 //            token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViNmQzM2IxMmE5OWE4NTQzMjNiNDlmOSIsInBob25lIjoiOTY3NjIxMzAyMyIsImlhdCI6MTUzNDkzMDI0M30.dD02WRiEKAAW0Tl-dSQgy5XoOiS3qDTsmptEnHJmChg"
+//        }
+//        loadData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        printDebug("TOKEN @ + = \(defaults.string(forKey: "token"))")
+        if let unwrapToken = defaults.string(forKey: "token"){
+            token = unwrapToken
+            loadData(token: token)
         }
-        loadData()
+        
     }
-    
     @IBAction func personalinfo(_ sender: UIButton) {
-        performSegue(withIdentifier: pesonalInfoSegue, sender: token)
+        performSegue(withIdentifier: pesonalInfoSegue, sender: userModel)
     }
-    private func loadData(){
+    private func loadData(token : String){
         //MARK : get user info
         printDebug(token)
         userViewModel.getUser(api: APISelected.getUserInfo.rawValue, parameters: [:], headres: ["auth":token], {
@@ -62,15 +75,15 @@ class UserViewController : UIViewController {
         bonuscard.text = "№ \(bCard.number ?? "")     \(bCard.sum ?? 0.0)".rubles
         let expDate = Date(millis: bCard.expirationDate ?? 0)
         expirationDate.text = "действительна до \(dateFormater.string(from: expDate))"
-        view.reloadInputViews()
+//        view.reloadInputViews()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case pesonalInfoSegue?:
             let controller = segue.destination as! PersonalInfoViewController
-            let token = sender as! String
-            controller.token = token
-            controller.userModel = userModel
+//            let token = sender as! String
+//            controller.token = token
+            controller.userModel = sender as? UserModel
         case feedBackSegue?:
             let controller = segue.destination as! FeedBackViewController
             let token = sender as! String
@@ -86,9 +99,13 @@ class UserViewController : UIViewController {
         performSegue(withIdentifier: feedBackSegue, sender: token)
     }
     func addCard(for type : String, number : String){
+        printDebug("\(type) \(number) \(token)")
         userViewModel.addCard(api: APISelected.addCard.rawValue, parameters: ["number":number as AnyObject, "type":type as AnyObject], headres: ["token":token], {
+//            self.printDebug("A")
             self.userModel = self.userViewModel.userModel
+//            self.printDebug("\(self.userModel)")
             if let model = self.userModel{
+//                self.printDebug("QQQQQ \(model.phone)")
                 self.setData(from: model)
             }
         }, {
@@ -105,7 +122,9 @@ class UserViewController : UIViewController {
         let actionAlert = UIAlertAction(title: "Отправить", style: .default){
             alertA in
             alert.textFields![0].delegate = self
+            
             guard let number = alert.textFields![0].text else {return}
+            self.printDebug("alert.textFields![0] \(number)")
                 self.addCard(for: TypeCard.bonus.rawValue , number: number)
         }
         alert.addAction(actionAlert)
